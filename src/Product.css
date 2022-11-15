@@ -1,0 +1,55 @@
+.product{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.2rem;
+    height: 430px;
+    width: 250px;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product p{
+position: absolute;
+bottom: 60px;
+font-weight: bold;
+
+}
+.product h3{
+    font-size: 1rem;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+}
+
+.product img{
+height: 290px;
+width: 220px;
+object-fit: fill;
+}
+
+.product button{
+    position: absolute;
+    transition: 0.2s ease;
+    bottom: 15px;
+    background: white;
+}
+
+.product button:hover{
+    background: black;
+    color: white;
+    font-weight: bolder;
+}
+
+@media (max-width:600px){
+    .product{
+        width: 100%;
+        left: 2%;
+
+    }
+    .product img{
+        height: 310px;
+        object-fit: fill;
+    }
+}

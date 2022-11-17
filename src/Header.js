@@ -3,17 +3,18 @@ import { HiOutlineShoppingBag, HiShoppingBag } from "react-icons/hi";
 
 import "./Header.css";
 import { useSelector } from "react-redux";
-import { cartclick, addcart } from "./actions";
+import { cartclick, addtocart } from "./actions";
 import { useDispatch } from "react-redux";
 
 const Header = () => {
-  const cart = useSelector((state) => state.addcart);
+  const cart = useSelector((state) => state.addtocart);
   const dispatch = useDispatch();
+  console.log(cart);
   useEffect(() => {
     if (localStorage.getItem("cartitems") !== null) {
       const getitems = JSON.parse(localStorage.getItem("cartitems"));
       getitems.forEach((item) => {
-        dispatch(addcart(item));
+        dispatch(addtocart(item));
       });
     }
   }, []);

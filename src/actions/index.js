@@ -1,4 +1,4 @@
-export const addcart=(payload)=>{
+export const addtocart=(payload)=>{
     return{
         type:"addtocart",
         payload:payload,

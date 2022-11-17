@@ -1,10 +1,10 @@
  const addtocartReducer=(state=[],action)=>{
     switch(action.type){
         case "addtocart":{
-            localStorage.setItem("cartitem",JSON.stringify([...state,action.payload]))
+            localStorage.setItem("cartitems",JSON.stringify([...state,action.payload]))
             return [...state,action.payload]
         }
-        case "deletefromcart":{
+        case "deletefrombasket":{
             let copyofBasket=[...state]
             let indeks=copyofBasket.findIndex(item=>item.id===action.payload)
             copyofBasket.splice(indeks,1)

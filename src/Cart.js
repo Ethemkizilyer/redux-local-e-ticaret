@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Cart.css"
-import { addcart, deletefrombasket } from "./actions";
-import uuid from "uuid"
+import { addtocart, deletefrombasket } from "./actions";
+import {v4 as uuidv4} from "uuid"
 import { useDispatch } from 'react-redux';
 
 function Cart({id,imagesrc,Price,Product}) {
@@ -10,7 +10,7 @@ function Cart({id,imagesrc,Price,Product}) {
         dispatch(deletefrombasket(value))
     }
     const addtobasket =()=> {
-        dispatch(addcart({id:uuid(),imagesrc,Product,Price}))
+        dispatch(addtocart({ id: uuidv4(), imagesrc, Product, Price }));
     }
   return (
     <div>

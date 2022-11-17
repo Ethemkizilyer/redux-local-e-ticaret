@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Cart.css"
 import { addcart, deletefrombasket } from "./actions";
-import uuid from "react-uuid"
+import uuid from "uuid"
 import { useDispatch } from 'react-redux';
 
 function Cart({id,imagesrc,Price,Product}) {

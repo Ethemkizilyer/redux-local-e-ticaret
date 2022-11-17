@@ -1,13 +1,14 @@
 import React from 'react'
-import 'Products.css'
+import './Product.css'
 import {addcart} from "./actions"
 import {useDispatch,useSelector} from "react-redux"
-const Additemincart=()=> {
-    dispatch(addcart({id,imagesrc,Product,Price}))
-}
+
 
 const Product = ({id,imagesrc,Product,Price}) => {
     const dispatch= useDispatch()
+    const Additemincart=()=> {
+    dispatch(addcart({id,imagesrc,Product,Price}))
+}
   return (
     <div className="product">
         <img src={imagesrc} alt="" />
